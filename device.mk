@@ -93,13 +93,14 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cust.cdrom=/dev/null
 
 # Radio
-PRODUCT_PACKAGES += \
-    qti-telephony-common
+#PRODUCT_PACKAGES += \
+#    qti-telephony-common \
+#    telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
-# Recovery
+#Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static
 
@@ -108,8 +109,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/releasetools.leland.sh:install/bin/releasetools.leland.sh
 
 # Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
+#PRODUCT_PACKAGES += \
+##    RemovePackages
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \

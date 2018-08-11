@@ -36,9 +36,12 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_NO_KERNEL := false
-TARGET_PREBUILT_KERNEL := /dev/null
+BOARD_KERNEL_IMAGE_NAME := kernel-Image.gz
+TARGET_NO_KERNEL := true
+#TARGET_KERNEL_SOURCE := kernel/honor/hi6250
+#KERNEL_CONFIG := merge_hi6250_defconfig
+#BOARD_KERNEL_CMDLINE = androidboot.selinux=permissive
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt_kernel/kernel-Image.gz
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := leland,lld,hi6250
@@ -74,3 +77,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service|libshims_hisupl.so
+
+# VNDK
+BOARD_VNDK_RUNTIME_DISABLE := true
