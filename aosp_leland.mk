@@ -33,3 +33,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=hi6250
 
 #ANDROID_JACK_VM_ARGS := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/aosp_excluded_hardware.xml:system/etc/permissions/aosp_excluded_hardware.xml
+
