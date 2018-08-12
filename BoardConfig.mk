@@ -37,7 +37,7 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_NO_KERNEL := false
+TARGET_NO_KERNEL := true
 TARGET_PREBUILT_KERNEL := /dev/null
 
 # Assert
@@ -74,3 +74,7 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service|libshims_hisupl.so
+
+#VNDK
+BOARD_VNDK_RUNTIME_DISABLE := true
+BOARD_USE_LEGACY_UI := true
